@@ -1,0 +1,298 @@
+button, textarea {
+    outline: none;
+}
+
+#main {
+    font-family: Roboto, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+#left-block {
+    width: 200px;
+    height: 100vh;
+    background-color: #0F1B34;
+    min-width: 150px;
+}
+
+#right-block {
+    width: calc(100vw - 200px);
+    height: 100vh;
+    min-width: 750px;
+}
+
+
+#control-bar {
+    border: lightgray 1px solid;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    height: 50px;
+}
+
+#control-left {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    height: 50px;
+}
+
+#control-right {
+    padding-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.control-btn {
+    display: flex;
+    align-items: center;
+}
+
+.glyph-btn {
+    background: white;
+    border: none;
+    font-size: 150%;
+}
+
+
+#add-todo {
+    height: 30px;
+    border-radius: 30px;
+    background: rgba(0, 0, 255, 0.66);
+    color: white;
+    padding: 0 20px;
+    margin-left: 20px;
+}
+
+#menu-btn {
+    margin-left: 20px;
+}
+
+#menu-btn:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 5px solid blue;
+    margin-left: -28px;
+}
+
+#page-atr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+}
+
+#site-image {
+    margin-left: -20px;
+    height: 50px;
+    width: 50px;
+}
+
+#site-name {
+    color: white;
+    font-size: 200%;
+    font-weight: bold;
+}
+
+#acc-btn {
+    margin-left: 20px;
+    border-radius: 15px;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+
+#todo-content {
+    background-color: #F6F7FA;
+    height: calc(100vh - 50px);
+    width: 100%;
+
+}
+
+
+.tasks-pools-blocks {
+    padding: 10px 20px;
+    height: calc((100vh - 50px) / 2);
+    width: 100%;
+}
+
+
+#task-pool {
+
+}
+
+#completed-pool {
+
+}
+
+.tasks-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 40px;
+}
+
+.tasks-text {
+    font-weight: bold;
+    font-size: 120%;
+
+}
+
+.tasks-count {
+    color: #919191;
+}
+
+.left-bar-item {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 60px;
+    color: white;
+    width: 100%;
+    cursor: pointer;
+}
+
+.left-bar-item:hover {
+    background-color: #132242;
+}
+
+.left-bar-item-before-text {
+    height: 100%;
+    width: 5px;
+    background-color: #5887FB;
+    visibility: hidden;
+}
+
+.left-bar-item-text {
+    font-size: 120%;
+    padding-left: 10px;
+    align-items: start;
+    text-align: center;
+}
+
+.left-bar-glyph {
+    padding-left: 40px;
+}
+
+.task-control-btn {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+}
+
+#home-page-container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#home-page-text {
+    color: white;
+    position: absolute;
+    z-index: 1;
+    top: 15px;
+    left: 50px;
+}
+
+#settings-h1 {
+    width: 100%;
+    text-align: center;
+}
+
+.pools {
+    padding: 0 20px 20px 20px;
+    overflow: auto;
+    height: calc(((100vh - 50px) / 2) - 60px);
+}
+
+.task {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    height: 80px;
+    margin-top: 10px;
+
+
+    padding: 20px 20px 20px 20px;
+
+}
+
+.owner-img {
+    border-radius: 25px;
+    width: 50px;
+    height: 50px;
+    font-size: 60%;
+}
+
+.tasks-name-in-pool {
+    overflow: hidden;
+    height: 20px;
+    font-weight: bold;
+    width: 300px;
+}
+
+.tasks-content-in-pool {
+    overflow: hidden;
+    font-size: 70%;
+    height: 40px;
+}
+
+.tasks-conteiner-for-content {
+    width: calc(100% - 50px);
+    padding-left: 20px;
+}
+
+.tasks-manip {
+    position: absolute;
+    right: -10px;
+    bottom: 20px;
+    font-size: 150%;
+    cursor: pointer;
+    color: #939393;
+    margin-top: 10px;
+}
+
+.created-date-in-pool {
+    right: 20px;
+    font-size: 70%;
+    color: #787878;
+    position: absolute;
+    top: 10px;
+}
+
+.priority-in-pool{
+    right: 100px;
+    font-size: 70%;
+    color: #5f5f5f;
+    position: absolute;
+    top: 10px;
+    width: 80px;
+    font-style: italic;
+}
+
+.status-in-pool{
+    font-weight: bold;
+    right: 200px;
+    font-size: 70%;
+    color: #5f5f5f;
+    position: absolute;
+    top: 10px;
+    width: 80px;
+}
+
+#remove-task{
+    background-color: red;
+}
+

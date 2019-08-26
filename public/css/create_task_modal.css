@@ -1,0 +1,20 @@
+#create-task-modal-body {
+    position: relative;
+    height: 600px;
+    width: 500px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+#create-task-modal-content{
+    width: 100%;
+    padding: 20px;
+}
+
+#new-task-content-text{
+    min-width: 300px;
+    max-width: 300px;
+    min-height: 50px;
+    max-height: 200px;
+}

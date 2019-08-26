@@ -1,0 +1,39 @@
+<div class="todo-modal" id="create-task-modal">
+    <div id="create-task-modal-body">
+        <div id="create-task-modal-content">
+            <div class="todo-modal-content-row">
+                <span>owner</span>
+                <span id="new-task-owner">current user</span>
+            </div>
+            <div class="todo-modal-content-row">
+                <span>status</span>
+                <span id="new-task-status">in progress</span>
+            </div>
+            <div class="todo-modal-content-row">
+                <span>name</span>
+                <input id="new-task-name" class="todo-modal-content-input" type="text" placeholder="enter task name">
+            </div>
+            <div class="todo-modal-content-row">
+                <span>priority</span>
+                <select id="new-task-priority">
+                    <option value="Low Priority">Low Priority</option>
+                    <option value="Medium Priority">Medium Priority</option>
+                    <option value="Hight Priority">Hight Priority</option>
+                </select>
+            </div>
+            <div class="todo-modal-content-row">
+                <span>content</span>
+                <textarea id="new-task-content-text" placeholder="enter task description"
+                          maxlength="255"></textarea>
+            </div>
+            <div class="todo-modal-content-row">
+                <span>owner image</span>
+                <input id="new-task-owner-img" class="todo-modal-content-input" type="text" placeholder="enter url to owner image">
+            </div>
+        </div>
+        <div class="modal-controls-panel">
+            <button id="save-task-btn" class="modal-control-btn modal-control-btn-success">save task</button>
+            <button class="modal-control-btn modal-control-btn-cancel">cancel</button>
+        </div>
+    </div>
+</div>

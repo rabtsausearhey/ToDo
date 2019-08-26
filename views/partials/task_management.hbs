@@ -1,0 +1,35 @@
+<div class="todo-modal" id="task-manegment-modal">
+    <div id="task-mang-modal-body">
+        <div id="task-mang-modal-content">
+
+            <div class="modal-header">Task id <n id="manegment-task-id"></n></div>
+
+            <div class="todo-modal-content-row">
+                <span>status</span>
+                <select id="update-task-status">
+                    <option value="in process">in progress</option>
+                    <option value="completed!">complited!</option>
+                </select>
+            </div>
+            <div class="todo-modal-content-row">
+                <span>priority</span>
+                <select id="update-task-priority">
+                    <option value="Low Priority">Low Priority</option>
+                    <option value="Medium Priority">Medium Priority</option>
+                    <option value="Hight Priority">Hight Priority</option>
+                </select>
+            </div>
+            <div class="todo-modal-content-row">
+                <span>content</span>
+                <textarea id="update-task-content-text" placeholder="enter task description"
+                          maxlength="255"></textarea>
+            </div>
+
+        </div>
+        <div class="modal-controls-panel">
+            <button id="apply-task-changes" class="modal-control-btn modal-control-btn-success">Apply</button>
+            <button id="remove-task" class="modal-control-btn">Remove Task</button>
+            <button class="modal-control-btn modal-control-btn-cancel">Cancel</button>
+        </div>
+    </div>
+</div>

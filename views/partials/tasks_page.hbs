@@ -1,0 +1,78 @@
+<div id="control-bar">
+    <div id="control-left">
+        <button class="control-btn glyph-btn" id="menu-btn">
+            <span class="glyphicon glyphicon-menu-hamburger"></span>
+        </button>
+
+    </div>
+    <div id="control-right">
+        <button class="control-btn glyph-btn" id="">
+            <span class="glyphicon glyphicon-sort-by-attributes-alt"></span>
+        </button>
+        <button class="control-btn glyph-btn" id="sort-by-alphabet-btn">
+            <span class="glyphicon glyphicon-sort-by-alphabet"></span>
+        </button>
+        <button class="control-btn" id="add-todo">
+            + Add ToDo
+        </button>
+        <img id="acc-btn" src="image/foto.png">
+    </div>
+
+</div>
+<div id="todo-content">
+    <div class="tasks-pools-blocks" id="tasks">
+        <div class="tasks-header">
+            <span class="tasks-text">To Do <span class="tasks-count">({{processingCount}})</span></span>
+            <div>
+                <button class="task-control-btn">
+                    <span class="glyphicon glyphicon-th"></span>
+                </button>
+                <button class="task-control-btn">
+                    <span class="glyphicon glyphicon-th-list"></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="pools" id="task-pool" ondrop="dropP(event)" ondragover="allowDrop(event)">
+            {{#each processing}}
+                <div class="task" id="{{this.id}}" draggable="true" ondragstart="drag(event)">
+                    <img class="owner-img" src="{{this.ownerImg}}" alt="{{this.owner}}">
+                    <div class="tasks-conteiner-for-content">
+                        <div class="tasks-name-in-pool">{{this.name}}</div>
+                        <div class="tasks-content-in-pool">{{this.content}}</div>
+                    </div>
+                    <div class="created-date-in-pool">{{this.date}}</div>
+                    <div class="priority-in-pool">{{this.priority}}</div>
+                    <div class="status-in-pool">{{this.status}}</div>
+                    <span class="glyphicon glyphicon-option-vertical tasks-manip"></span>
+                </div>
+            {{/each}}
+        </div>
+
+    </div>
+
+    <div class="tasks-pools-blocks" id="completed-tasks">
+        <div class="tasks-header">
+            <span class="tasks-text">Completed <span class="tasks-count">({{completedCount}})</span></span>
+        </div>
+
+        <div class="pools" id="completed-pool" ondrop="dropC(event)" ondragover="allowDrop(event)">
+            {{#each completed}}
+                <div class="task" id="{{this.id}}" draggable="true" ondragstart="drag(event)">
+                    <img class="owner-img" src="{{this.ownerImg}}" alt="{{this.owner}}">
+                    <div class="tasks-conteiner-for-content">
+                        <div class="tasks-name-in-pool">{{this.name}}</div>
+                        <div class="tasks-content-in-pool">{{this.content}}</div>
+                    </div>
+                    <div class="created-date-in-pool">{{this.date}}</div>
+                    <div class="priority-in-pool">{{this.priority}}</div>
+                    <div class="status-in-pool" style="color: #7ac974">{{this.status}}</div>
+                    <span class="glyphicon glyphicon-option-vertical tasks-manip"></span>
+                </div>
+            {{/each}}
+        </div>
+
+    </div>
+</div>
+{{> create_task_modal}}
+{{> task_management}}

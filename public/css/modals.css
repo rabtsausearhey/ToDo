@@ -1,0 +1,58 @@
+.todo-modal{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    visibility: collapse;
+}
+
+.modal-controls-panel {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 40px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    padding-right: 20px;
+}
+
+.modal-control-btn {
+    width: 100px;
+    color: white;
+    border: none;
+}
+
+.modal-control-btn-cancel {
+    background-color: lightgray;
+    border-radius: 0 5px 5px 0;
+}
+
+.modal-control-btn-success {
+    background-color: #7ac974;
+    border-radius: 5px 0 0 5px;
+}
+
+.todo-modal-content-row{
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo-modal-content-input{
+    width: 300px;
+}
+
+.modal-header{
+    width: 100%;
+    text-align: center;
+}
+
+
