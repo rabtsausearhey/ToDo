@@ -5,7 +5,6 @@ let user = -1;
 
 $(document).ready(function () {
     initControls();
-    initHomeControl();
 });
 
 function initControls() {
@@ -22,20 +21,27 @@ function initTasksControls() {
     $('.modal-control-btn-cancel').click(closeModal);
     $('.tasks-manip').click(showManagmentTaskModal);
     $('#remove-task').click(removeTask)
-    $('#apply-task-changes').click(updateTask)
+    $('#apply-task-changes').click(updateTask);
+    $('.acc-btn').click(showSecurityMenu);
 }
 
-function initHomeControl() {
-    $('#sing-in-btn').click(singIn);
-    $('# sing-up-btn').click(singUp);
-}
+function showSecurityMenu() {
+    let element = $('#security-menu');
 
-function singIn() {
 
-}
+    const elClass = element.attr('class');
 
-function singUp() {
-
+    if(elClass){
+        if (elClass==='security-menu-open') {
+            element.removeClass('security-menu-open');
+            element.addClass('security-menu-close');
+        }else{
+            element.removeClass('security-menu-close');
+            element.addClass('security-menu-open');
+        }
+    }else{
+        element.addClass('security-menu-open');
+    }
 }
 
 function updateTaskStatus(id, status, successF) {

@@ -42,6 +42,7 @@ button, textarea {
 }
 
 #control-right {
+    position: relative;
     padding-right: 20px;
     display: flex;
     justify-content: center;
@@ -103,12 +104,71 @@ button, textarea {
     font-weight: bold;
 }
 
-#acc-btn {
+#acc-btn-img {
     margin-left: 20px;
     border-radius: 15px;
     height: 30px;
     width: 30px;
     cursor: pointer;
+}
+
+#acc-btn-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 160%;
+    margin-left: 20px;
+    border-radius: 15px;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    border: #0F1B34 1px solid;
+}
+
+.security-menu-open {
+    height: 300px;
+    visibility: visible;
+    animation-name: openSecurityMenu;
+    animation-duration: 0.5s;
+
+}
+
+.security-menu-close {
+    height: 0;
+    visibility: collapse;
+    animation-name: closeSecurityMenu;
+    animation-duration: 0.5s;
+}
+
+#security-menu {
+    position: absolute;
+    z-index: 10;
+    top: 40px;
+    right: 20px;
+    background-color: white;
+    width: 200px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes openSecurityMenu {
+    from {
+        visibility: visible;
+        height: 0;
+    }
+    to {
+        height: 300px;
+    }
+}
+
+@keyframes closeSecurityMenu {
+    from {
+        visibility: visible;
+        height: 300px;
+    }
+    to {
+        height: 0;
+        visibility: collapse;
+    }
 }
 
 #todo-content {
@@ -189,7 +249,7 @@ button, textarea {
     border: none;
 }
 
-#home-page-container{
+#home-page-container {
     width: 100%;
     height: 100%;
     position: relative;
@@ -223,7 +283,7 @@ button, textarea {
     border-radius: 5px;
     height: 80px;
     margin-top: 10px;
-
+    background-color: white;
 
     padding: 20px 20px 20px 20px;
 
@@ -272,7 +332,7 @@ button, textarea {
     top: 10px;
 }
 
-.priority-in-pool{
+.priority-in-pool {
     right: 100px;
     font-size: 70%;
     color: #5f5f5f;
@@ -282,7 +342,7 @@ button, textarea {
     font-style: italic;
 }
 
-.status-in-pool{
+.status-in-pool {
     font-weight: bold;
     right: 200px;
     font-size: 70%;
@@ -292,7 +352,7 @@ button, textarea {
     width: 80px;
 }
 
-#remove-task{
+#remove-task {
     background-color: red;
 }
 

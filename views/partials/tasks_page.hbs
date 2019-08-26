@@ -15,7 +15,17 @@
         <button class="control-btn" id="add-todo">
             + Add ToDo
         </button>
-        <img id="acc-btn" src="image/foto.png">
+
+        {{#if login}}
+            <img id="acc-btn-img" class="acc-btn" src="image/foto.png">
+        {{else}}
+            <div class="glyphicon glyphicon-user acc-btn" id="acc-btn-div"></div>
+        {{/if}}
+
+        <div id="security-menu">
+
+        </div>
+
     </div>
 
 </div>
