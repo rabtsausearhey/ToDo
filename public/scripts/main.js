@@ -1,7 +1,6 @@
 const SUCCESS_CODE = "ok";
 const COMPLETED_STATUS = 'completed!';
 const PROGRESS_STATUS = 'in progress';
-let user = -1;
 
 $(document).ready(function () {
     initControls();
@@ -31,15 +30,15 @@ function showSecurityMenu() {
 
     const elClass = element.attr('class');
 
-    if(elClass){
-        if (elClass==='security-menu-open') {
+    if (elClass) {
+        if (elClass === 'security-menu-open') {
             element.removeClass('security-menu-open');
             element.addClass('security-menu-close');
-        }else{
+        } else {
             element.removeClass('security-menu-close');
             element.addClass('security-menu-open');
         }
-    }else{
+    } else {
         element.addClass('security-menu-open');
     }
 }
@@ -170,7 +169,6 @@ function moveToHomePage() {
 
 function moveToTasksPage() {
     const url = '/api/tasks-page-content';
-    const data = {};
     const success = data => {
         if (data.code === SUCCESS_CODE) {
             $('#right-block').html(data.html);
@@ -179,7 +177,7 @@ function moveToTasksPage() {
             alert(data["message"]);
         }
     };
-    $.get(url, data, success);
+    $.get(url, success);
 }
 
 function moveToSettings() {
@@ -223,7 +221,6 @@ function dropP(ev) {
 function dropC(ev) {
     ev.preventDefault();
     const id = ev.dataTransfer.getData("text");
-
     const successF = data => {
         if (data.code === SUCCESS_CODE) {
             const element = $(`#${id}`);

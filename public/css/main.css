@@ -141,6 +141,7 @@ button, textarea {
 }
 
 #security-menu {
+    overflow: hidden;
     position: absolute;
     z-index: 10;
     top: 40px;

@@ -26,9 +26,8 @@ exports.renderTasksPart = async (req, res) => {
         const completed = taskPool.completed;
         const completedCount = completed.length;
         const processingCount = processing.length;
-        const login = true;
 
-        hb.render("views/partials/tasks_page.hbs", {login,processing,completedCount, completed,processingCount})
+        hb.render("views/partials/tasks_page.hbs", {processing,completedCount, completed,processingCount})
             .then((renderedHtml) => {
                 res.json({"code": "ok", "message": "success", "html": renderedHtml});
             });
